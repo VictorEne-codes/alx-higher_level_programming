@@ -9,7 +9,8 @@ def is_same_class(obj, a_class):
         obj: input
         a_class: input
 
-    Returns: True
+    Returns: 
+        True: if its same class
     """
 
     return type(obj) == a_class
