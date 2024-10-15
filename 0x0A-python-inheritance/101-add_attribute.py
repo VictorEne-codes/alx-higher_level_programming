@@ -9,7 +9,8 @@ def add_attribute(object, attr_name, value):
         object: input
         attr_name: input
         value: input
-    
+
+
     Raises:
         TypeError:  if the object can’t have new attribute.
     """
