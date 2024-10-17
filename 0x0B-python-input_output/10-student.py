@@ -19,7 +19,6 @@ class Student:
 
     def to_json(self, attrs=None):
         """from json to class"""
-        
         if attrs is None:
             return self.__dict__
         new_dict = {}
