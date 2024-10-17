@@ -12,5 +12,6 @@ try:
 except (ValueError, FileNotFoundError):
     new_list = []
 
-new_list.extend(argv[1:])
+for i in argv[1:]:
+    new_list.append(i)
 save(new_list, 'add_item.json')
