@@ -17,3 +17,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @classmethod
+    def reset_nb_objects(cls):
+        cls.__nb_objects = 0
