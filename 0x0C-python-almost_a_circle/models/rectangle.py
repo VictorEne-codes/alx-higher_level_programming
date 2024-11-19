@@ -89,7 +89,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """print output"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """assign variable arguments"""
@@ -108,11 +109,21 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
-                if key == "width":
+                elif key == "width":
                     self.width = value
-                if key == "height":
+                elif key == "height":
                     self.height = value
-                if key == "x":
+                elif key == "x":
                     self.x = value
-                if key == "y":
+                elif key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """object to dictionary"""
+        return {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
